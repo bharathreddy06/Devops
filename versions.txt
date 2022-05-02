@@ -1,0 +1,11 @@
+git--->2.25.1
+java--->11.0.14.1
+maven--->3.6.3
+jenkins--->2.332.1
+docker--->20.10.13
+kubernetes--->1.23.5
+terraform--->1.1.6 latest is 1.1.9
+ansible--->2.9
+sonarqube--->
+jira--->
+

@@ -1,0 +1,89 @@
+CI/CD
+1.	Continuous Integration: integrate code, shared repository,automated build
+2.	Continuous Delivery: to selected infrastructure environments,multiple environments Deploy changes 
+3.	Continuous Deployment: released to your customers
+	Stage 1  - pom.xml, dependency git checkout
+	stage 2  - mvn clean install
+	Stage 3  - .war - jfrog
+	Stage 4  - war - 
+
+what is jenkins?
+open source continuous integration/continuous delivery and deployment (CI/CD) automation software 
+DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, 
+called pipelines.
+
+Continous delivery vs continous deployment
+
+jenkinsfile? and why?
+A Jenkinsfile is a text file that contains the definition of a Jenkins pipeline and is checked into 
+source control. As it stores the entire workflow as code, it underpins the code review and iteration
+process of a pipeline.
+written in groovy DSL (domain declarative language)
+
+types of pipeline syntax?
+
+    Declarative: new concept. code concept. easier to read and write. can be checked into a source 
+control management system such as Git.
+    Scripted: traditional way of writing the code. written on the Jenkins UI instance. 
+The declarative pipeline is defined within a block labelled ‘pipeline’ whereas the scripted pipeline is
+ defined within a ‘node’. 
+
+
+what is an agent?
+specifies where the entire Pipeline, or a specific stage, will execute in the Jenkins environment 
+depending on where the agent section is placed. The section must be defined at the top-level inside 
+the pipeline block, but stage-level usage is optional.
+
+credential management in jenkins?
+
+jenkins architecture?
+
+    1. Developers commit changes to the source code, found in the repository.
+    2. The Jenkins CI server checks the repository at regular intervals and pulls any newly available
+ code.
+    3. The Build Server builds the code into an executable file. In case the build fails, feedback is
+sent to the developers.
+    4. Jenkins deploys the build application to the test server. If the test fails, the developers are 
+alerted.
+    5. If the code is error-free, the tested application is deployed on the production server.
+
+what is a label?
+
+what is a job?
+
+SonarQube?
+SonarQube evaluates your code against a set of rules called quality profiles.
+detects bugs in the code automatically and alerts developers to fix before rolling out for production
+
+Hudson ?
+CI (Continuous Integration) server for Java development. 
+
+Artifatory?
+repository manager that supports all available software package types, enabling automated 
+continous integration and delivery. management of binaries 
+
+what is groovy?
+
+how to you take backup of jenkins server?
+
+default storage location in jenkins?
+/var/lib/jenkins
+
+environment variables in jenkins?
+
+Maven life cycle?
+1. validate: project correctness, dependencies, libraries, pom.xml. check errors and fix
+2. compile: generate binary
+3. test: tested in suitable framework as defined in pom.xml. done by maven itself
+4. package: made into .war, .jar, .ear
+5. integration testing: prototype step. all micro services converted to .jar respectively
+				brought together, integrated and tested
+6. verify: verifies
+7. install: if local repo defined, required dependencies are installed
+8. deploy: deployed to respective environments
+
+
+Triggers in jenkins?
+build perirodically
+poll scm
+github webhook trigger
